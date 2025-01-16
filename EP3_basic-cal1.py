@@ -1,7 +1,11 @@
 
-tilecolor={'red':100,'gold':200,'white':90}
+tilecolor={'red':100,'gold':200,'white':90,'grey':30}
 
-print('Program by user input')
+print('----------------Tile Price------------------')
+for c,t in tilecolor.items():
+    print('color: {}  price:{}'.format(c,t))
+
+print('----------------Program by user input V.2----------------')
 try:
     tiles=int(input('How many total tiles do you want to use:'))
     row=int(input('How many tiles using for 1 row:'))
@@ -15,7 +19,7 @@ except:
 print('------------------Calculate------------')
 total_row=tiles//row
 remain_tiles=tiles%row
-#print(total_row,remain_tiles)
+
 
 buy_more=row-remain_tiles
 
@@ -26,5 +30,6 @@ print('Must have {} rows'.format(total_row))
 print('There are remainings tiles that didnt use {} tiles'.format(remain_tiles))
 print('Client must buy extra {} tiles'.format(buy_more))
 
+print('-----------------The End------------------')
 
 
